@@ -58,6 +58,9 @@ namespace MediaBrowser.Controller.Entities.Audio
         public override Folder LatestItemsIndexContainer => AlbumEntity;
 
         [JsonIgnore]
+        public override bool SupportsPositionTicksResume => true;
+
+        [JsonIgnore]
         public MusicAlbum AlbumEntity => FindParent<MusicAlbum>();
 
         /// <summary>
